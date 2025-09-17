@@ -1,8 +1,35 @@
+
 "use client";
+
+import Link from "next/link";
+
+const COURSE = "CS 5610";
+const YOUR_NAME = "Dhairya Pinakinkumar Patel";
+const REPO = "https://github.com/HABER7789/kambaz-next-js-fa25";
+
 
 export default function Lab1() {
     return (
+
         <div id="wd-lab1">
+            <header style={{ marginBottom: 16 }}>
+                <h2>Lab 1: HTML Examples</h2>
+                <p>Full Name: {YOUR_NAME}</p>
+                <p>
+                    GitHub repository:{" "}
+                    <a href={REPO} target="_blank" rel="noreferrer">{REPO}</a>
+                </p>
+                <p>
+                    Course: {COURSE}
+                </p>
+                <ul>
+                    <li><Link href="/Labs/Lab1">Lab 1: HTML Examples</Link></li>
+                    <li><Link href="/Labs/Lab2">Lab 2: CSS Basics</Link></li>
+                    <li><Link href="/Labs/Lab3">Lab 3: JavaScript Fundamentals</Link></li>
+                </ul>
+                <hr />
+            </header>
+
             <h2>Lab 1</h2>
             <h3>HTML Examples</h3>
             <div id="wd-h-tag">
@@ -201,7 +228,7 @@ export default function Lab1() {
                 <button type="button" onClick={() => alert("Life is Good!")} id="wd-all-good">
                     Hello World!
                 </button>
-                
+
                 {/* File Upload */}
                 <h5 id="wd-file-upload">File Upload</h5>
                 <label htmlFor="wd-file">Upload a file:</label>
